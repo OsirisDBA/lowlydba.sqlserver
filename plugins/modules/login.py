@@ -61,10 +61,18 @@ options:
     type: str
     required: false
     version_added: '2.1.0'
-  skip_password_reset:
+  password_reset:
     description:
-      - Skips the password reset if the login exists and I(password) is set.
+      - If the login exists and I(password) is set, the password will be reset.
     type: bool
+    default: true
+    required: false
+    version_added: '2.2.0'
+  password_hashed:
+    description:
+      - The value for I(password) contains a hashed password.
+    type: bool
+    default: false
     required: false
     version_added: '2.2.0'
 author: "John McCall (@lowlydba)"
